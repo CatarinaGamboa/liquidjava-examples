@@ -4,7 +4,8 @@ Examples to use with LiquidJava
 ## Install Visual Studio Code Extension
 1. Open the terminal on the extension folder
 2. `code --install-extension liquid-java-0.0.1.vsix`
-3. Open Visual Studio Code and open a Java project (with src folder inside). If the project contains the liquidjava-api.jar then the extension will be activated, otherwise the LiquidJava verification is not applied.
+3. Ensure that VSCode has the redhat extension for [Language support for Java ™](https://marketplace.visualstudio.com/items?itemName=redhat.java) installed and enabled (Java 11 is the minimum required for this extension to run).
+4. Open Visual Studio Code and open a Java project (with src folder inside). If the project contains the liquidjava-api.jar then the extension will be activated, otherwise the LiquidJava verification is not applied.
 
 
 ## Using the examples
