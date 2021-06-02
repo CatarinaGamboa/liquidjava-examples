@@ -13,14 +13,16 @@ Examples to use with LiquidJava
 #### part3-liquidJava
 Contains LiquidJava projects.
 
-Open one of the folders on VSCode with the extension running and find the error. You can open the folder through the terminal by going to the correct path and typing `code` or open through the VSCode GUI 
+Open one of the folders on VSCode with the extension running. Uncomment the code in the Test file and find the error. You can open the folder through the terminal by going to the correct path and typing `code` or open through the VSCode GUI.
 
 #### part3-plainJava
 Contains Java projects without LiquidJava.
 
-Open one of the folders on VSCode with and find the error.
+Open one of the folders on VSCode and find the error.
 
 #### part4
-Contains Java projects to annotate with LiquidJava.
+Contains Java files to be annotated with LiquidJava.
+- **Variable.java** - Add the annotation and check the correct and wrong assignment
+- **TrafficLight.java** - Add the annotations on the fields and model the state using `@StateSet` and `@StateRefinement`. To check if the modelling is correct, uncomment the file `TestTLCorrect.java` (that should be correct) and then uncomment the file `TestTLWrong.java` that should present an error.  
 
 
