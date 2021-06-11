@@ -1,9 +1,13 @@
+import repair.regen.specification.Refinement;
+import repair.regen.specification.StateRefinement;
+import repair.regen.specification.StateSet;
 
 public class TrafficLight {
 
 	private int r; 	
 	private int g; 	
 	private int b;
+	
 	
 	public TrafficLight() {
 		r = 76; g = 187; b = 23;
