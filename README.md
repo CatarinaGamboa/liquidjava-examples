@@ -2,14 +2,16 @@
 Examples to use with [LiquidJava](https://catarinagamboa.github.io/liquidjava.html)
 
 ## Examples
+### part1-plainJava
+Contains Java projects without LiquidJava.
+Open one of the folders on VSCode and find the error.
+
+
 ### part3-liquidJava
 Contains LiquidJava projects.
 
 Open one of the folders on VSCode with the extension running. Uncomment the code in the Test file and find the error. You can open the folder through the terminal by going to the correct path and typing `code` or open through the VSCode GUI.
 
-### part3-plainJava
-Contains Java projects without LiquidJava.
-Open one of the folders on VSCode and find the error.
 
 ### part4
 Contains Java files to be annotated with LiquidJava.
