@@ -6,7 +6,7 @@ public class TrafficLight {
 	private int b;
 	
 	public TrafficLight() {
-		r = 255; g = 0; b = 0; 
+		r = 76; g = 187; b = 23;
 	}
 
 	public void transitionToGreen() {
