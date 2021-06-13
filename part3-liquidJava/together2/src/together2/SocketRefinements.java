@@ -18,6 +18,9 @@ public interface SocketRefinements {
 	
 	@StateRefinement(from="binded(this)", to="connected(this)")
 	public void connect(SocketAddress add);
+
+	@StateRefinement(from="binded(this)", to="connected(this)")
+	public void connect(SocketAddress add, int timeout);
 	
 	@StateRefinement(from="connected(this)")
 	public void sendUrgentData(int n);
