@@ -11,7 +11,7 @@ public class Test2 {
 		
 		Socket socket = new Socket();
 		socket.bind(new InetSocketAddress(inetAddress, port));
-     	socket.sendUrgentData(90);
+     		socket.sendUrgentData(90);
 		socket.close();
 	}
 
