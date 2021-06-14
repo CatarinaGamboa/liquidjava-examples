@@ -2,6 +2,7 @@ package together1;
 
 import repair.regen.specification.ExternalRefinementsFor;
 import repair.regen.specification.Ghost;
+import repair.regen.specification.Refinement;
 import repair.regen.specification.StateRefinement;
 
 @ExternalRefinementsFor("java.util.ArrayDeque")
@@ -27,5 +28,11 @@ public interface ArrayDequeRefinements<E> {
 
 	@StateRefinement(from="size(this)> 0", to="size(this) == (size(old(this)) - 1)")
 	public E pop();
+
+	@Refinement("_ == size(this)")
+	public int size();
+
+	@Refinement("_ == (size(this) <= 0)")
+	public boolean isEmpty();
 
 }
