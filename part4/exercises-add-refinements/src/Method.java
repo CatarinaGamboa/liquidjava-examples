@@ -13,6 +13,6 @@ public class Method {
 
     public static void main(String[] args) {
         inRange(10, 11); //Correct
-        // inRange(10, 9); //Error
+        inRange(10, 9); //Error
     }
 }
