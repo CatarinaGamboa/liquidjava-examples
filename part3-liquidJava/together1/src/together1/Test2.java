@@ -14,7 +14,7 @@ public class Test2 {
 //		 p.offerFirst(6);
 //		 p.getLast();
 //		 p.remove();
-//	     p.getLast();
+//	   	 p.getLast();
 //		 p.add(78);
 //		 p.add(8);
 //		 p.getFirst();
