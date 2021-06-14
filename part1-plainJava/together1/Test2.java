@@ -5,7 +5,7 @@ import java.net.Socket;
 
 public class Test2 {
 	
-	public static void main(String[] args) throws IOException{
+	public void createSocket(InetSocketAddress addr) throws IOException{
 		int port = 5000;
 		InetAddress inetAddress = InetAddress.getByName("localhost");    
 		
