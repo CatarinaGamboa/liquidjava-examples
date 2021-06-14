@@ -6,7 +6,6 @@ public class Test2 {
         /* Uncomment Below */
         // int port = 5000;
         // InetAddress inetAddress = InetAddress.getByName("localhost");
-        // 
         // Socket socket = new Socket();
         // socket.bind(new InetSocketAddress(inetAddress, port));
         // socket.sendUrgentData(90);
