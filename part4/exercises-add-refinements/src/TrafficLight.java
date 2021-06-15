@@ -1,7 +1,7 @@
 import repair.regen.specification.Refinement;
 import repair.regen.specification.StateRefinement;
 import repair.regen.specification.StateSet;
-@StateSet({"a", "b"})
+
 public class TrafficLight {
 
 	private int r; 	

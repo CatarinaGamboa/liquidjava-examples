@@ -9,7 +9,7 @@ public class Test1 {
         if(n <= 0)
             return 0;
         else
-            return n * fibonacci(n-1);
+            return n + fibonacci(n-1);
     }
 
 }
