@@ -12,12 +12,12 @@ public class Test1 {
     * @return The fibonacci nth number. The fibonacci sequence follows the formula Fn = Fn-1 + Fn-2 and has the starting values of F0 = 1 and F1 = 1 
     */
     /*Uncomment Below*/
-    @Refinement( "_ >= 1 && GreaterEqualThan(_, n)")
-    public static int fibonacci(@Refinement("Nat(n)") int n){
-        if(n <= 0)
-            return 0;
-        else
-            return n * fibonacci(n-1);
-    }
+    // @Refinement( "_ >= 1 && GreaterEqualThan(_, n)")
+    // public static int fibonacci(@Refinement("Nat(n)") int n){
+    //     if(n <= 0)
+    //         return 0;
+    //     else
+    //         return n + fibonacci(n-1);
+    // }
 	
 }
