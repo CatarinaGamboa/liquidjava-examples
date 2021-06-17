@@ -10,7 +10,7 @@ public class Test1 {
     * Computes the fibonacci of index n
     * @param n The index of the required fibonacci number (greater or equal to 0)
     * @return The fibonacci nth number. The fibonacci sequence follows the formula 
-              Fn = Fn-1 + Fn-2 and has the starting values of F0 = 0 and F1 = 1 
+              Fn = Fn-1 + Fn-2 and has the starting values of F0 = 1 and F1 = 1 
     */
     /*Uncomment Below*/
     @Refinement( "_ >= 0 && GreaterEqualThan(_, n)")
