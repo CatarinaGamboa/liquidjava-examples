@@ -8,6 +8,8 @@ For more information about LiquidJava, visit our [website](https://catarinagambo
 
 ## Development Environment Setup
 
+![Video of the steps above](./figs/steps2.gif)
+
 ### Setup Instructions
 
 #### Option 1: Using Codespaces or Dev Containers (Recommended)
@@ -16,9 +18,6 @@ For more information about LiquidJava, visit our [website](https://catarinagambo
 2. Install the extension: View → Extensions → ... → Install from VSIX → `/workspaces/liquidjava-examples/extension/liquid-java-0.0.15.vsix`
 3. After the information that the extension is activated, do `Ctrl + Shift + P` and write `Developer: Reload Window `
 4. Open examples: File → Open Folder → `examples/demo/src/`
-
-![Video of the steps above](./figs/steps2.gif)
-
 
 
 #### Extension Activation
