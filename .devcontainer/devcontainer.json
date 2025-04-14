@@ -5,10 +5,7 @@
     "vscode": {
       "extensions": [
         "vscjava.vscode-java-pack"
-      ],
-      "settings": {
-        "workbench.startupEditor": "none"
-      }
+      ]
     }
   },
   "features": {
@@ -16,6 +13,6 @@
       "version": "21"
     }
   },
-  "postCreateCommand": "echo 'Installing extension and dependencies...' && code --install-extension ${containerWorkspaceFolder}/extension/liquid-java-0.0.15.vsix --force && npm install",
-  "postAttachCommand": "echo 'Opening examples...' && find ${containerWorkspaceFolder}/examples -type f -name '*.java' | head -1 | xargs code"
+  "postCreateCommand": "apt-get update && apt-get install -y git-lfs && git lfs install && git lfs pull && code --install-extension ./extension/liquid-java-0.0.15.vsix --force && if [ -f 'package.json' ]; then npm install; fi",
+  "postStartCommand": "if [ -d './examples/demo/src/' ]; then code ./examples/demo/src/; else echo 'Examples directory not found'; fi"
 }
