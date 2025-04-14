@@ -1,11 +1,10 @@
 {
-  "name": "Latte Extension Dev",
+  "name": "LiquidJava Extension Dev",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-java-pack",
-        "${containerWorkspaceFolder}/extension/liquid-java-0.0.15.vsix"
+        "vscjava.vscode-java-pack"
       ]
     }
   },
@@ -14,6 +13,6 @@
       "version": "21"
     }
   },
-  "postCreateCommand": "code --install-extension extension/liquid-java-0.0.15.vsix && npm install",
+  "postCreateCommand": "code --install-extension ${containerWorkspaceFolder}/extension/liquid-java-0.0.15.vsix && npm install",
   "postStartCommand": "code examples/demo/src/"
 }
