@@ -11,8 +11,12 @@
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21"
-    }
+    },
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
   },
-  "postCreateCommand": "apt-get update && apt-get install -y git-lfs && git lfs install && git lfs pull && code --install-extension ./extension/liquid-java-0.0.15.vsix --force && if [ -f 'package.json' ]; then npm install; fi",
-  "postStartCommand": "if [ -d './examples/demo/src/' ]; then code ./examples/demo/src/; else echo 'Examples directory not found'; fi"
+  "postCreateCommand": "echo '👉 Starting installation process...' && git lfs install && echo '🔄 Pulling LFS files...' && git lfs pull && echo '📦 Installing extension...' && code --install-extension ./extension/liquid-java-0.0.15.vsix --force && echo '✅ LiquidJava extension installation complete!' && if [ -f 'package.json' ]; then echo '📦 Installing npm dependencies...' && npm install && echo '✅ npm dependencies installed!'; fi",
+  "postStartCommand": "if [ -d './examples/demo/src/' ]; then echo '📂 Opening examples directory...' && code ./examples/demo/src/ && echo '✅ Examples opened!'; else echo '❌ Examples directory not found'; fi",
+  "postAttachCommand": {
+    "notifyCompletion": "echo '\n\n==========================================\n🎉 SETUP COMPLETE: LiquidJava Extension Development Environment is ready!\n==========================================\n'"
+  }
 }
