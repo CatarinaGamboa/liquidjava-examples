@@ -5,7 +5,10 @@
     "vscode": {
       "extensions": [
         "vscjava.vscode-java-pack"
-      ]
+      ],
+      "settings": {
+        "workbench.startupEditor": "none"
+      }
     }
   },
   "features": {
@@ -13,6 +16,6 @@
       "version": "21"
     }
   },
-  "postCreateCommand": "code --install-extension ${containerWorkspaceFolder}/extension/liquid-java-0.0.15.vsix && npm install",
-  "postStartCommand": "code examples/demo/src/"
+  "postCreateCommand": "echo 'Installing extension and dependencies...' && code --install-extension ${containerWorkspaceFolder}/extension/liquid-java-0.0.15.vsix --force && npm install",
+  "postAttachCommand": "echo 'Opening examples...' && find ${containerWorkspaceFolder}/examples -type f -name '*.java' | head -1 | xargs code"
 }
