@@ -5,7 +5,7 @@
     "vscode": {
       "extensions": [
         "vscjava.vscode-java-pack",
-        "${containerWorkspaceFolder}/client/liquid-java-0.0.15.vsix"
+        "./extension/liquid-java-0.0.15.vsix"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"
@@ -18,9 +18,9 @@
     },
     "ghcr.io/devcontainers/features/git-lfs:1": {}
   },
-  "postCreateCommand": "echo '👉 Starting installation process...' > /tmp/setup-log.txt && git lfs install >> /tmp/setup-log.txt 2>&1 && echo '🔄 Pulling LFS files...' >> /tmp/setup-log.txt && git lfs pull >> /tmp/setup-log.txt 2>&1 && echo '📦 Installing extension...' >> /tmp/setup-log.txt && code --install-extension ./extension/liquid-java-0.0.15.vsix --force >> /tmp/setup-log.txt 2>&1 && echo '✅ LiquidJava extension installation complete!' >> /tmp/setup-log.txt",
-  "postStartCommand": "if [ -d './examples/demo/src/' ]; then echo '📂 Opening examples directory...' >> /tmp/setup-log.txt && code ./examples/demo/src/ >> /tmp/setup-log.txt 2>&1 && echo '✅ Examples opened!' >> /tmp/setup-log.txt; else echo '❌ Examples directory not found' >> /tmp/setup-log.txt; fi",
+  "postCreateCommand": "echo '👉 Starting setup...' > /tmp/setup-log.txt && git lfs install >> /tmp/setup-log.txt 2>&1 && echo '🔄 Pulling LFS files...' >> /tmp/setup-log.txt && git lfs pull >> /tmp/setup-log.txt 2>&1 && echo '✅ Git LFS setup complete!' >> /tmp/setup-log.txt",
+  "postStartCommand": "if [ -d './examples/demo/src/' ]; then echo '✅ Examples directory found at ./examples/demo/src/' >> /tmp/setup-log.txt; else echo '❌ Examples directory not found' >> /tmp/setup-log.txt; fi",
   "postAttachCommand": {
-    "notifyCompletion": "echo '\n\n==========================================\n🎉 SETUP COMPLETE: LiquidJava Extension Development Environment is ready!\n==========================================\n' && echo '\nSetup log:' && cat /tmp/setup-log.txt"
+    "notifyCompletion": "echo '\n\n==========================================\n🎉 SETUP COMPLETE: LiquidJava Extension Development Environment is ready!\n==========================================\n\n📋 SETUP REPORT:' && if grep -q 'Git LFS setup complete' /tmp/setup-log.txt; then echo '✅ Git LFS configured successfully'; else echo '❌ Git LFS setup failed'; fi && if grep -q 'Examples directory found' /tmp/setup-log.txt; then echo '✅ Examples directory located'; else echo '❌ Examples directory not found'; fi && echo '\nYour extension should be installed via the devcontainer.json customizations.\nTo open the examples directory, use File > Open Folder... and navigate to examples/demo/src/\n'"
   }
 }
