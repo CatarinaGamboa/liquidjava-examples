@@ -7,7 +7,7 @@ This collection demonstrates how to use LiquidJava, a powerful extension for Jav
 For more information about LiquidJava, visit our [website](https://catarinagamboa.github.io/liquidjava.html)!
 
 ## Development Environment Setup
-
+🚀 Check the following video on the setup:
 ![Video of the steps above](./figs/steps2.gif)
 
 ### Setup Instructions
@@ -15,9 +15,11 @@ For more information about LiquidJava, visit our [website](https://catarinagambo
 #### Option 1: Using Codespaces or Dev Containers (Recommended)
 
 1. Open the repository in GitHub Codespaces or use VS Code's "Remote-Containers: Open Folder in Container" command.
-2. Install the extension: View → Extensions → ... → Install from VSIX → `/workspaces/liquidjava-examples/extension/liquid-java-0.0.15.vsix`
+2. Install the extension: View → Extensions →  Click on the "..." (More Actions) button → Install from VSIX → `/workspaces/liquidjava-examples/extension/liquid-java-0.0.15.vsix`.
 3. After the information that the extension is activated, do `Ctrl + Shift + P` and write `Developer: Reload Window `
-4. Open examples: File → Open Folder → `examples/demo/src/`
+5. Open examples: File → Open Folder → `examples/demo/src/`.
+6. You can try changing the example to see an error appear.
+7. If needed, reload window again using `Developer: Reload Window `.
 
 
 #### Extension Activation
