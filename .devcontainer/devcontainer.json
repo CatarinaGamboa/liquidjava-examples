@@ -4,8 +4,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-java-pack",
-        "./extension/liquid-java-0.0.15.vsix"
+        "vscjava.vscode-java-pack"
       ]
     }
   },
@@ -13,5 +12,6 @@
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21"
     }
-  }
+  },
+  "postStartCommand": "bash setup.sh"
 }
