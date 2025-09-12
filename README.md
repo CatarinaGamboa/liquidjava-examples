@@ -14,13 +14,13 @@ For more information about LiquidJava, visit our [website](https://catarinagambo
 
 #### Option 1: Using Codespaces (Recommended)
 
-- To use codespaces, make sure you’re logged in to GitHub, click the button below, select `4-core`, and then press `Create codespace`. After a few minutes an editor with the LiquidJava extension enabled will open in your browser. Then, after the extension is installed, open the `examples/demo` folder.
+- To use codespaces, make sure you’re logged in to GitHub, click the button below, select `4-core`, and then press `Create codespace`. The codespace will open in your browser and will automatically install the LiquidJava extension shortly after.
 
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/rcosta358/liquidjava-examples)
 
 #### Option 2: Using Dev Containers
 
-- If you prefer to test it locally, you can use VS Code's Dev Containers. Make sure you have Docker and the Dev Containers extension installed in VS Code and use the "Remote-Containers: Open Folder in Container" command. Then, run the `./setup.sh` script in the terminal to install the extension.
+- If you prefer to test it locally, you can use VS Code's Dev Containers. Make sure you have Docker and the Dev Containers extension installed in VS Code and use the "Remote-Containers: Open Folder in Container" command. Then, run the `setup.sh` script to install the extension.
 
 #### Option 3: Manual Setup
 
