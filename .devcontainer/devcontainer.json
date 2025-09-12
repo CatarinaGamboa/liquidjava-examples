@@ -13,5 +13,5 @@
       "version": "21"
     }
   },
-  "postStartCommand": "bash setup.sh"
+  "postAttachCommand": "bash setup.sh"
 }
