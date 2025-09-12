@@ -4,7 +4,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-java-pack"
+        "vscjava.vscode-java-pack",
+        "./extension/liquid-java-0.0.15.vsix"
       ]
     }
   },
@@ -12,7 +13,5 @@
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21"
     }
-  },
-  "workspaceFolder": "/workspaces/liquidjava-examples",
-  "postCreateCommand": "bash setup.sh"
+  }
 }
