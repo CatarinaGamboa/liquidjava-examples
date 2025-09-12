@@ -14,5 +14,5 @@
     }
   },
   "workspaceFolder": "/workspaces/liquidjava-examples",
-  "postCreateCommand": "bash ./setup.sh"
+  "postCreateCommand": "bash setup.sh"
 }
