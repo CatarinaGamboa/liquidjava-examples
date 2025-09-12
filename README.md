@@ -8,13 +8,13 @@ For more information about LiquidJava, visit our [website](https://catarinagambo
 
 ## Development Environment Setup
 🚀 Check the following video on the setup:
-![Video of the steps above](./figs/steps2.gif)
+![Video of the steps below](./figs/steps2.gif)
 
 ### Setup Instructions
 
 #### Option 1: Using Codespaces (Recommended)
 
-- To use codespaces, make sure you’re logged in to GitHub, click the button below, select `4-core`, and then press `Create codespace`. The codespace will open in your browser and will automatically install the LiquidJava extension shortly after.
+- To use Codespaces, make sure you’re logged in to GitHub, click the button below, select `4-core`, and then press `Create codespace`. The codespace will open in your browser and will automatically install the LiquidJava extension shortly after.
 
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/CatarinaGamboa/liquidjava-examples)
 
@@ -49,10 +49,10 @@ If the automatic setup didn't work correctly, follow these manual steps:
    code --install-extension extension/liquid-java-0.0.15.vsix
    ```
 
-4. Ensure the redhat extension for [Language Support for Java™](https://marketplace.visualstudio.com/items?itemName=redhat.java) is installed and enabled.
+4. Ensure the Red Hat extension for [Language Support for Java™](https://marketplace.visualstudio.com/items?itemName=redhat.java) is installed and enabled.
 
-5. Open examples:
-   - Go to File → Open Folder → examples/demo/src/
+5. Open the examples:
+   - Go to File → Open Folder → examples/demo
    - Or use the terminal:
    ```bash
    code examples/demo/src/
@@ -60,9 +60,8 @@ If the automatic setup didn't work correctly, follow these manual steps:
 
 ### Troubleshooting
 
-##### Extension Activation
+#### Extension Activation
 
-- The extension displays an item in the status bar at the bottom left of VS Code, indicating its current state.
 - The extension will only activate when opening a Java project with the `liquidjava-api.jar` present in the workspace.
 - If the extension doesn't activate properly, do `Ctrl + Shift + P` and run `Developer: Reload Window`.
 
@@ -85,11 +84,11 @@ If you see "End of central directory record signature not found" or similar erro
 1. Ensure your project is correctly set up with the `liquidjava-api.jar`.
 2. When opening a Java file, the extension will automatically verify your LiquidJava annotations.
 3. Errors will be highlighted directly in your code editor.
+4. An item in the status bar at the bottom left of the editor indicates the extension's current state. You can check the extension logs by clicking on it.
 
 ## Download JARs
 
-`examples/demo/lib` folder contains the api jar that you can use in your projects.
-
+`examples/demo/lib` folder contains the API jar necessary to run LiquidJava.
 
 ## Examples
 ```

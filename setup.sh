@@ -2,7 +2,7 @@
 
 # Check if extension is already installed
 if code --list-extensions | grep -q "liquid-java" 2>/dev/null; then
-    echo "🎯 LiquidJava extension already installed!"
+    echo "✅ LiquidJava extension already installed!"
     exit 0
 fi
 
