@@ -16,7 +16,7 @@ For more information about LiquidJava, visit our [website](https://catarinagambo
 
 - To use codespaces, make sure you’re logged in to GitHub, click the button below, select `4-core`, and then press `Create codespace`. The codespace will open in your browser and will automatically install the LiquidJava extension shortly after.
 
-   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/rcosta358/liquidjava-examples)
+   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/CatarinaGamboa/liquidjava-examples)
 
 #### Option 2: Using Dev Containers
 
