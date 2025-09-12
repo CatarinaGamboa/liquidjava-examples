@@ -13,5 +13,6 @@
       "version": "21"
     }
   },
-  "postAttachCommand": "bash setup.sh"
+  "workspaceFolder": "/workspaces/liquidjava-examples/examples/demo",
+  "postAttachCommand": "bash ../../setup.sh"
 }
