@@ -38,6 +38,13 @@ else
     find . -type d -maxdepth 2 | sort
 fi
 
-echo "🎉 Setup complete! Please follow these manual steps:"
-echo "1. Install the extension: View → Extensions → ... → Install from VSIX → extension/liquid-java-0.0.15.vsix"
-echo "2. Open examples: File → Open Folder → examples/demo/src/"
+# Install extension
+echo "🔧 Installing LiquidJava VSCode extension..."
+code --install-extension ./extension/liquid-java-0.0.15.vsix
+if [ $? -eq 0 ]; then
+    echo "✅ Extension installed successfully"
+else
+    echo "❌ Failed to install the extension"
+fi
+
+echo "🎉 Setup complete!"
