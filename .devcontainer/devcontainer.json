@@ -1,5 +1,5 @@
 {
-  "name": "LiquidJava Extension Dev",
+  "name": "LiquidJava Demo",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "customizations": {
     "vscode": {
@@ -14,5 +14,5 @@
     }
   },
   "postAttachCommand": "bash ./setup.sh",
-  "workspaceFolder": "/workspaces/liquidjava-demo/examples/demo"
+  "workspaceFolder": "/workspaces/liquidjava-examples/examples/demo"
 }
