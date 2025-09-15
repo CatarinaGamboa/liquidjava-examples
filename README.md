@@ -8,27 +8,21 @@ For more information about LiquidJava, visit our [website](https://catarinagambo
 
 ## Development Environment Setup
 🚀 Check the following video on the setup:
-![Video of the steps above](./figs/steps2.gif)
+![Video of the steps below](./figs/steps2.gif)
 
 ### Setup Instructions
 
-#### Option 1: Using Codespaces or Dev Containers (Recommended)
+#### Option 1: Using Codespaces (Recommended)
 
-1. Open the repository in GitHub Codespaces or use VS Code's "Remote-Containers: Open Folder in Container" command.
-2. Install the extension: View → Extensions →  Click on the "..." (More Actions) button → Install from VSIX → `/workspaces/liquidjava-examples/extension/liquid-java-0.0.15.vsix`.
-3. After the information that the extension is activated, do `Ctrl + Shift + P` and write `Developer: Reload Window `
-5. Open examples: File → Open Folder → `examples/demo/src/`.
-6. You can try changing the example to see an error appear.
-7. If needed, reload window again using `Developer: Reload Window `.
+- To use Codespaces, make sure you’re logged in to GitHub, click the button below, select `4-core`, and then press `Create codespace`. The codespace will open in your browser and will automatically install the LiquidJava extension shortly after.
 
+   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/CatarinaGamboa/liquidjava-examples)
 
-#### Extension Activation
+#### Option 2: Using Dev Containers
 
-- The extension may take some time to be activated. While a small wheel in the bottom right of VS Code window is spinning, the extension is being loaded.
-- The extension will only activate when opening a Java project with the liquidjava-api.jar present.
-  
+- If you prefer to test it locally, you can use VS Code's Dev Containers. Make sure you have Docker and the Dev Containers extension installed in VS Code and use the "Remote-Containers: Open Folder in Container" command. Then, run the `setup.sh` script to install the extension.
 
-#### Option 2: Manual Setup
+#### Option 3: Manual Setup
 
 If the automatic setup didn't work correctly, follow these manual steps:
 
@@ -55,16 +49,21 @@ If the automatic setup didn't work correctly, follow these manual steps:
    code --install-extension extension/liquid-java-0.0.15.vsix
    ```
 
-4. Ensure the redhat extension for [Language Support for Java™](https://marketplace.visualstudio.com/items?itemName=redhat.java) is installed and enabled.
+4. Ensure the Red Hat extension for [Language Support for Java™](https://marketplace.visualstudio.com/items?itemName=redhat.java) is installed and enabled.
 
-5. Open examples:
-   - Go to File → Open Folder → examples/demo/src/
+5. Open the examples:
+   - Go to File → Open Folder → examples/demo
    - Or use the terminal:
    ```bash
    code examples/demo/src/
    ```
 
 ### Troubleshooting
+
+#### Extension Activation
+
+- The extension will only activate when opening a Java project with the `liquidjava-api.jar` present in the workspace.
+- If the extension doesn't activate properly, do `Ctrl + Shift + P` and run `Developer: Reload Window`.
 
 #### VSIX File Issues
 
@@ -80,17 +79,16 @@ If you see "End of central directory record signature not found" or similar erro
    cat ./extension/liquid-java-0.0.15.vsix | head
    ```
 
-
 ## Working with the Extension
 
 1. Ensure your project is correctly set up with the `liquidjava-api.jar`.
 2. When opening a Java file, the extension will automatically verify your LiquidJava annotations.
 3. Errors will be highlighted directly in your code editor.
+4. An item in the status bar at the bottom left of the editor indicates the extension's current state. You can check the extension logs by clicking on it.
 
 ## Download JARs
 
-`examples/demo/lib` folder contains the api jar that you can use in your projects.
-
+`examples/demo/lib` folder contains the API jar necessary to run LiquidJava.
 
 ## Examples
 ```
