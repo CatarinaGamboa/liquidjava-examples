@@ -26,11 +26,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>com.example</groupId>
-        <artifactId>liquidjava-api</artifactId>
-        <version>0.0.2-SNAPSHOT</version>
-        <scope>system</scope>
-        <systemPath>${project.basedir}/lib/liquidjava-api-0.0.2-SNAPSHOT.jar</systemPath>
+      <groupId>io.github.rcosta358</groupId>
+      <artifactId>liquidjava-api</artifactId>
+      <version>0.0.2</version>
     </dependency>
   </dependencies>
 
