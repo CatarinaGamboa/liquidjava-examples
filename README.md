@@ -8,25 +8,25 @@ For more information about LiquidJava, visit our [website](https://catarinagambo
 
 ### Setup Instructions
 
-#### Option 1: Using Codespaces
+#### Using Codespaces
 
-- To use Codespaces, make sure you’re logged in to GitHub, click the button below, select `4-core`, and then press `Create codespace`. The codespace will open in your browser and will automatically install the LiquidJava extension shortly after.
+- To use Codespaces, make sure you’re logged in to GitHub, click the button below, select `4-core`, and then press `Create codespace`. The codespace will open in your browser and with the LiquidJava extension installed.
 
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/CatarinaGamboa/liquidjava-examples)
 
-#### Option 2: Using Dev Containers
+#### Using Dev Containers
 
-- Alternatively, you can use VS Code's Dev Containers. Make sure you have Docker and the Dev Containers extension installed in VS Code and use the "Remote-Containers: Open Folder in Container" command.
+- You can also use VS Code's Dev Containers. Make sure you have Docker and the Dev Containers extension installed in VS Code and use the "Remote-Containers: Open Folder in Container" command.
 
-#### Option 3: Local Setup
+#### Local Setup
 
-- Finally, you can use the extension locally in your VS Code, by pulling this repository and installing the extension from the marketplace, which is available [here](https://marketplace.visualstudio.com/items?itemName=AlcidesFonseca.liquid-java).
+- Alternatively, you can use the extension locally in your VS Code, by pulling this repository and installing the extension from the marketplace, which is available [here](https://marketplace.visualstudio.com/items?itemName=AlcidesFonseca.liquid-java).
 - Ensure the Red Hat extension for [Language Support for Java™](https://marketplace.visualstudio.com/items?itemName=redhat.java) is also installed and enabled.
 - Make sure to have at least Java 20+ and Maven  3.6+ installed on your machine.
 - Execute the following commands in your terminal:
 
 ```sh
-git pull https://github.com/CatarinaGamboa/liquidjava-examples
+git clone https://github.com/CatarinaGamboa/liquidjava-examples
 cd liquidjava-examples/examples/demo
 mvn clean install
 ```
@@ -37,7 +37,7 @@ mvn clean install
 2. Errors will be reported in real-time and refinements will have syntax highlighting.
 3. An item in the status bar at the bottom left of the editor indicates the extension's current state. You can check the extension logs by clicking on it.
 
-## Examples
+### Examples
 ```
 liquidjava-examples/
 ├── examples/                          
