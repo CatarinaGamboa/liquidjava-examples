@@ -4,7 +4,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-java-pack"
+        "vscjava.vscode-java-pack",
+        "AlcidesFonseca.liquid-java"
       ]
     }
   },
@@ -14,5 +15,4 @@
     }
   },
   "workspaceFolder": "/workspaces/liquidjava-examples/examples/demo",
-  "postAttachCommand": "cd ../../ && bash setup.sh && cd ./examples/demo"
 }
