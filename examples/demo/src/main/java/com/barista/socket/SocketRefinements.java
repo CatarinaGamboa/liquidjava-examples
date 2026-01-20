@@ -68,6 +68,11 @@ public interface SocketRefinements {
     @StateRefinement(from="unconnected(this) || binded(this)", to="connected(this)")
     public void connect(SocketAddress endpoint, @Refinement("Positive(_)") int timeout);
 
+    @StateRefinement(from="binded(this)", to="binded(this)")
+    @StateRefinement(from="unconnected(this)", to="unconnected(this)")
+    @StateRefinement(from="!(size >= 64000) && connected(this)", to="connected(this)")
+    public void setReceiveBufferSize(int size);
+
     @StateRefinement(from="unconnected(this)", to="unconnected(this)")
     @StateRefinement(from="binded(this)", to="binded(this)")
     @StateRefinement(from="connected(this)", to="connected(this)")
