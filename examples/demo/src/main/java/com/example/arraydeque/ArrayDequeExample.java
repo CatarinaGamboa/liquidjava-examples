@@ -1,24 +1,19 @@
-package com.example;
+package com.example.arraydeque;
 
-import java.io.IOException;
 import java.util.ArrayDeque;
 
-public class TestArrayDeque {
+public class ArrayDequeExample {
 
-	public static void main(String[] args) throws IOException{
-		/*Uncomment Below*/
+	public static void main(String[] args) {
         ArrayDeque<Integer> p = new ArrayDeque<>();
         p.add(2);
         p.remove();
         p.offerFirst(6);
         p.getLast();
         p.remove();
-        // p.getLast();
+        // p.getLast(); // uncomment for error
         p.add(78);
         p.add(8);
         p.getFirst();
-
-		
     }
-	
 }
