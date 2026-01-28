@@ -33,6 +33,7 @@ public interface BufferedInputStreamRefinements {
     @StateRefinement(from="marked(this)", to="marked(this)")
     public long skip(@Refinement("Positive(_)") long n);
 
+    @StateRefinement(from="open(this)", to="open(this)")
     @StateRefinement(from="marked(this)", to="marked(this)")
     public int available();
 
