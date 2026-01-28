@@ -18,7 +18,6 @@ import liquidjava.specification.StateSet;
 @ExternalRefinementsFor("java.net.Socket")
 @RefinementAlias("Port(int x) {x >= 0 && x <= 65535 }")
 @StateSet({"unconnected", "bound", "connected", "closed", "inputShutdown", "outputShutdown", "bothShutdown"})
-// @StateSet({"inputShutdown", "outputShutdown", "bothShutdown"})
 interface SocketRefinements {
 
     @StateRefinement(to="unconnected(this)")
