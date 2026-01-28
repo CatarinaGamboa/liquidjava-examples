@@ -42,7 +42,7 @@ public interface BufferedInputStreamRefinements {
     public void mark(@Refinement("Positive(_)") int readlimit);
 
     @StateRefinement(from="marked(this)", to="marked(this)")
-    public int reset();
+    public void reset();
 
     @StateRefinement(from="open(this)", to="open(this)")
     @StateRefinement(from="marked(this)", to="marked(this)")
@@ -50,5 +50,5 @@ public interface BufferedInputStreamRefinements {
     
     @StateRefinement(from="open(this)", to="closed(this)")
     @StateRefinement(from="marked(this)", to="closed(this)")
-    public boolean close();
+    public void close();
 }

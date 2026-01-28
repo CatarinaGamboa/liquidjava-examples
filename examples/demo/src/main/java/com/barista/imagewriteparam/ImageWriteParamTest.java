@@ -27,6 +27,6 @@ public class ImageWriteParamTest {
     public void test4() {
         ImageWriteParam iwp = new ImageWriteParam(null);
         iwp.setCompressionMode(2);
-        iwp.unsetCompression(null);
+        iwp.unsetCompression();
     }
 }

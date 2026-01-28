@@ -9,9 +9,4 @@ public class BufferedInputStreamTest {
             x.close();
             x.available();
     }
-
-    public void test2() throws IOException {
-            BufferedInputStream x = new BufferedInputStream(null);
-            x.available();
-    }
 }
