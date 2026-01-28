@@ -20,7 +20,7 @@ public class Test {
 
         PipedInputStream pi = new PipedInputStream(10);
         PipedOutputStream p = new PipedOutputStream(pi);
-        p.connect();
+        p.connect(new PipedInputStream(10));
     }
 
 
