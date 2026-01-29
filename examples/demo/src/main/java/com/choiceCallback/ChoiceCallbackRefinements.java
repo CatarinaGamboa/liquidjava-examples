@@ -8,13 +8,9 @@ import liquidjava.specification.StateSet;
 @ExternalRefinementsFor("javax.security.auth.callback.ChoiceCallback")
 public interface ChoiceCallbackRefinements {
 
-    // not supported
-    @StateRefinement(from="multipleSelectionsAllowed == true", to="multiple(this)")
-    @StateRefinement(from="multipleSelectionsAllowed == false", to="single(this)")
+    @StateRefinement(to="multipleSelectionsAllowed ? multiple(this) : single(this)")
     public void ChoiceCallback(String prompt, String[] choices, int defaultChoice, boolean multipleSelectionsAllowed);
     
-
     @StateRefinement(from="multiple(this)", to="multiple(this)")
     public void setSelectedIndexes(int[] selections);
 }
-
