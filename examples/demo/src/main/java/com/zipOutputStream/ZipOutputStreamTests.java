@@ -11,12 +11,12 @@ public class ZipOutputStreamTests {
         zos.setMethod(8);
         zos.setLevel(5);
         zos.close();
-        zos.write(null, 0, 0);
+        zos.write(null, 0, 0); // error
     }
 
     void testParametricRefinements() throws Exception {
         FileOutputStream fos = new FileOutputStream("file");
         ZipOutputStream zos = new ZipOutputStream(fos);
-        zos.setLevel(10);
+        zos.setLevel(10); // error
     }
 }

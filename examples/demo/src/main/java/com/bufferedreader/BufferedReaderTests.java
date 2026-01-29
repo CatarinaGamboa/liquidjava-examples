@@ -8,16 +8,16 @@ public class BufferedReaderTests {
     void readClosedFile() throws Exception {
         BufferedReader in = new BufferedReader(new FileReader("foo.in"));
         in.close();
-        in.read();
+        in.read(); // error
     }
 
     void resetUnmarkedFile() throws Exception {
         BufferedReader in = new BufferedReader(new FileReader("foo.in"));
-        in.reset();
+        in.reset(); // error
     }
 
     void negativeLength() throws Exception {
-        BufferedReader in = new BufferedReader(new FileReader("foo.in"), -1);
+        BufferedReader in = new BufferedReader(new FileReader("foo.in"), -1); // error
     }
 
     void noErrors() throws Exception {
