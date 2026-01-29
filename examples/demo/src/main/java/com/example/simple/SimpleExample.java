@@ -1,4 +1,5 @@
 package com.example.simple;
+
 import liquidjava.specification.Refinement;
 
 public class SimpleExample {
