@@ -8,6 +8,6 @@ public class ChoiceCallbackTests {
     void example() {
         boolean allowMultipleSelection = false;
         ChoiceCallback cc = new ChoiceCallback(null, null, 0, allowMultipleSelection);
-        cc.setSelectedIndexes(null); // should be an error because allowMultipleSelection is false
+        cc.setSelectedIndexes(null); // error
     }
 }

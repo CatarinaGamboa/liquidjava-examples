@@ -17,5 +17,4 @@ public class DragSourceContextTests {
         dsc.dragEnter(null);
         dsc.dragExit(null);
     }
-    
 }

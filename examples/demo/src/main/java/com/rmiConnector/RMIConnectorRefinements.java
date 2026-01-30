@@ -1,6 +1,5 @@
 package com.rmiConnector;
 
-import java.io.IOException;
 import java.util.Map;
 
 import javax.management.MBeanServerConnection;
