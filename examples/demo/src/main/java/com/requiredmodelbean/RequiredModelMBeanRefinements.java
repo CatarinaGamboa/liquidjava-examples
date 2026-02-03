@@ -9,7 +9,7 @@ import liquidjava.specification.StateRefinement;
 import liquidjava.specification.StateSet;
 
 @ExternalRefinementsFor("javax.management.modelmbean.RequiredModelMBean")
-@StateSet({"unregistered", "registered"})
+@StateSet({"unregistered", "preRegistered", "registered", "preUnregistered"})
 interface RequiredModelMBeanRefinements{
 
     @StateRefinement(to="unregistered(this)")
@@ -18,18 +18,16 @@ interface RequiredModelMBeanRefinements{
     @StateRefinement(to="unregistered(this)")
     void RequiredModelMBean(ModelMBeanInfo mbi);
 
-    
-    @StateRefinement(from="unregistered(this)")
+    @StateRefinement(from="unregistered(this)", to="preRegistered(this)")
     ObjectName preRegister(MBeanServer server, ObjectName name);
 
-    @StateRefinement(to="registered(this)")
+    @StateRefinement(from="preRegistered(this)", to="registered(this)")
     void postRegister(Boolean registrationDone);
 
-
-    @StateRefinement(from="registered(this)")
+    @StateRefinement(from="registered(this)", to="preUnregistered(this)")
     void preDeregister();
 
-    @StateRefinement(from="registered(this)", to="unregistered(this)")
+    @StateRefinement(from="preUnregistered(this)", to="unregistered(this)")
     void postDeregister();
 
     @StateRefinement(from="unregistered(this)")
