@@ -46,7 +46,7 @@ public interface Window {
     public void pack();
 
     // Check this
-    @StateRefinement(to="ite(visible, displayable(this), true) && ite(visible, visible(this), invisible(this))")
+    @StateRefinement(to="(visible ? displayable(this) : true) && (visible ? visible(this) : invisible(this))")
     public void setVisible(boolean visible);
 
     @StateRefinement(from="displayable(this)", to="notDisplayable(this) && invisible(this)")
