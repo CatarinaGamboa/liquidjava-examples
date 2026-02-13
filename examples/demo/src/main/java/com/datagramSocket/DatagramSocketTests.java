@@ -21,15 +21,27 @@ public class DatagramSocketTests {
         ds.close();
     }
 
-    public void testSendingAfterDisconnecting() throws Exception {
+    public void testBindTwice() throws Exception {
         DatagramSocket ds = new DatagramSocket(8080);
-        ds.connect(null);
-        ds.disconnect();
-        ds.send(null); // error
+        ds.bind(null); // error
     }
 
     public void testBindingAfterAlreadyBound() throws Exception {
         DatagramSocket ds = new DatagramSocket(8080);
         ds.bind(null); // error
+    }
+
+     public void testConnectingAfterClosing() throws Exception {
+        DatagramSocket ds = new DatagramSocket(8080);
+        ds.connect(null);
+        ds.close();
+        ds.connect(null); // error
+    }
+
+    public void testBound() throws Exception {
+        DatagramSocket ds = new DatagramSocket(8080);
+        if (!ds.isBound()) {
+            ds.bind(null); // this should not be an error
+        }
     }
 }
