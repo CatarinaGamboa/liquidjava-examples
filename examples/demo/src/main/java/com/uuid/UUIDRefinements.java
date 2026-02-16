@@ -11,15 +11,13 @@ import liquidjava.specification.StateSet;
 // (v/4096) % 16;
 
 @ExternalRefinementsFor("java.util.UUID")
-@StateSet({"other", "maybeTime"})
+@StateSet({"other", "maybeTime", "timeBased"})
 @RefinementAlias("Version(int v) {v >= 0 && v <= 4}")
 @RefinementAlias("Variant(int v) {v == 0 || v == 2 || v == 6 || v == 7}")
 public interface UUIDRefinements {
 
     // creation
-    // would be cool to add 
-    // @StateRefinement(to="((mostSigBits/4096) % 16 == 1) ? timeBased(this) : other(this)") 
-    @StateRefinement(to="maybeTime(this)")
+    @StateRefinement(to="((mostSigBits/4096) % 16 == 1) ? timeBased(this) : other(this)") 
     void UUID(long mostSigBits, long leastSigBits);
 
     //static
@@ -36,12 +34,15 @@ public interface UUIDRefinements {
 
     
     @StateRefinement(from="maybeTime(this)")
+    @StateRefinement(from="timeBased(this)")
     int clockSequence();
     
     @StateRefinement(from="maybeTime(this)")
+    @StateRefinement(from="timeBased(this)")
     long timestamp();
     
     @StateRefinement(from="maybeTime(this)")
+    @StateRefinement(from="timeBased(this)")
     long node();
     
     @Refinement("Variant(_)")
