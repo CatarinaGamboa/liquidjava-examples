@@ -9,7 +9,7 @@ public class PipedWriterTest {
         PipedWriter p = new PipedWriter();
         PipedReader r = new PipedReader();
         p.connect(r);
-        p.write('a');
+        p.write(/*'a'*/35);
         p.flush();
         p.close();
         r.close();
@@ -17,7 +17,9 @@ public class PipedWriterTest {
     void test2() throws IOException {
         PipedReader r = new PipedReader();
         PipedWriter p = new PipedWriter(r);
-        char [] arr = {'a', 'b', 'c'};
+        char [] arr = {}; // OK for LiquidJava
+        // char c = 'a';  // breaks LiquidJava
+
         p.write(arr, 1, 2);
         p.flush();
         p.close();
@@ -26,9 +28,10 @@ public class PipedWriterTest {
     void testFail() throws IOException {
         PipedWriter p = new PipedWriter();
         PipedReader r = new PipedReader();
+        //char [] arr = {'a', 'b', 'c'}; // breaks LiquidJava
         p.flush();
-        char [] arr = {'a', 'b', 'c'};
-        p.write(arr, 2, 2);
+        char [] arr2 = {'a', 'b', 'c'}; // breaks LiquidJava if analyzed (it isn't here, because there's an error in p.flush() above)
+        p.write(arr2, 2, 2);
         p.close();
         r.close();
     }
